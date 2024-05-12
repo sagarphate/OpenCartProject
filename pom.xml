@@ -4,10 +4,10 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	
-  	<groupId>DEC2023POMSeries</groupId>
-  	<artifactId>DEC2023POMSeries</artifactId>
-  	<version>0.0.1-SNAPSHOT</version>
+
+	<groupId>DEC2023POMSeries</groupId>
+	<artifactId>DEC2023POMSeries</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
 
 	<name>Dec2023Selenium</name>
 	<!-- FIXME change it to the project's website -->
@@ -29,13 +29,15 @@
 			<version>${selenium.version}</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>7.8.0</version>
+			<version>7.9.0</version>
+			
 		</dependency>
-		
-		
+
+
 		<!-- Dependency for read the data from Excel File -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
@@ -67,29 +69,29 @@
 			<groupId>org.apache.poi</groupId>
 			<artifactId>openxml4j</artifactId>
 			<version>1.0-beta</version>
-		</dependency> 
-		
+		</dependency>
+
 		<!-- Dependency for read the data from CSV File -->
 		<dependency>
-		    <groupId>com.opencsv</groupId>
-		    <artifactId>opencsv</artifactId>
-		    <version>5.9</version>
+			<groupId>com.opencsv</groupId>
+			<artifactId>opencsv</artifactId>
+			<version>5.9</version>
 		</dependency>
-		
+
 		<!--Log4J Dependency for generate Logs-->
 		<dependency>
-   			<groupId>org.apache.logging.log4j</groupId>
-  			<artifactId>log4j-core</artifactId>
-  			<version>2.20.0</version>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.20.0</version>
 		</dependency>
-		
+
 		<!-- Dependency for read the data from extentreports -->
 		<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
 			<version>${extentreports-version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>io.qameta.allure</groupId>
 			<artifactId>allure-testng</artifactId>
@@ -101,9 +103,9 @@
 			<artifactId>aspectjweaver</artifactId>
 			<version>${aspectj.version}</version>
 		</dependency>
-		
+
 	</dependencies>
-		
+
 	<build>
 
 		<plugins>
@@ -126,16 +128,17 @@
 					<forkCount>3</forkCount>
 					<reuseForks>true</reuseForks>
 					<suiteXmlFiles>
-						<suiteXmlFile>src\test\resources\testrunner\testng_sanity.xml</suiteXmlFile>
+						<suiteXmlFile>
+							src\test\resources\testrunner\testng_sanity.xml</suiteXmlFile>
 						<!-- <suiteXmlFile>${suiteXmlFile}</suiteXmlFile> -->
 					</suiteXmlFiles>
-					
+
 					<argLine>
 						-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
 					</argLine>
-					
+
 				</configuration>
-				
+
 				<dependencies>
 					<dependency>
 						<groupId>org.aspectj</groupId>
@@ -143,7 +146,7 @@
 						<version>${aspectj.version}</version>
 					</dependency>
 				</dependencies>
-				
+
 			</plugin>
 		</plugins>
 
