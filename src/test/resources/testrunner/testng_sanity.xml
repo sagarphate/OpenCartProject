@@ -27,14 +27,15 @@
 		</classes>
 	</test>
 
-	<!--
+	
 	<test name="Registeration Page Test">
-	<parameter name="browser" value="edge"/>
+	<parameter name="browser" value="chrome"/>
 		<classes>
 			<class name="com.qa.opencart.tests.RegisterationPageTest" />
 		</classes>
 	</test>
-
+	
+<!--
 	<test name="Searh Results Page Test">
 	<parameter name="browser" value="firefox"/>
 		<classes>
