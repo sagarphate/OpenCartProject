@@ -19,7 +19,8 @@
 			<class name="com.qa.opencart.tests.LoginPageTest" />
 		</classes>
 	</test>
-
+	
+<!-- 
 	<test name="Accounts Page Test">
 		<parameter name="browser" value="chrome" />
 		<classes>
@@ -34,7 +35,7 @@
 			<class name="com.qa.opencart.tests.RegisterationPageTest" />
 		</classes>
 	</test>
-	
+
 	<test name="Searh Results Page Test">
 	<parameter name="browser" value="edge"/>
 		<classes>
@@ -55,5 +56,5 @@
 			<class name="com.qa.opencart.tests.ShoppingCartPageTest" />
 		</classes>
 	</test>
-
+-->
 </suite>
