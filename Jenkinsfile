@@ -25,6 +25,24 @@ pipeline
             }
         }    
         
+        stage("Deploy to DEV"){
+            steps{
+                echo("deploy to DEV")
+            }
+        }
+        
+        
+                
+        stage('Sanity Automation Tests on DEV') {
+            steps {
+                catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+                     git 'https://github.com/sagarphate/OpenCartProject.git'
+                  	 bat "mvn clean test -Dsurefire.suiteXmlFiles=src\test\resources\testrunner\testng_chrome.xml -Denv=dev"
+                    
+                }
+            }
+        }
+        
         
         stage("Deploy to QA"){
             steps{
